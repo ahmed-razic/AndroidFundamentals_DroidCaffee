@@ -33,22 +33,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void displayToast(String message) {
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-    }
-
-    public void showFroyoOrder(View view) {
-        displayToast(getString(R.string.donut_order_message));
-    }
-
-    public void showIceCreamOrder(View view) {
-        displayToast(getString(R.string.ice_cream_order_message));
-    }
-
-    public void showDonutOrder(View view) {
-        displayToast(getString(R.string.froyo_order_message));
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -69,5 +53,19 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showIceCreamOrder(View view) { displayToast(getString(R.string.ice_cream_order_message)); }
+
+    public void showDonutOrder(View view) {
+        displayToast(getString(R.string.donut_order_message));
+    }
+
+    public void showFroyoOrder(View view) {
+        displayToast(getString(R.string.froyo_order_message));
+    }
+
+    public void displayToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
 }
