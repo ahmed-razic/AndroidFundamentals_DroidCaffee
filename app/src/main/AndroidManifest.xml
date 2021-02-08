@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFundamentals_DroidCafee">
         <activity
+            android:name=".OrderActivity"
+            android:label="Order Activity" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AndroidFundamentals_DroidCafee.NoActionBar">
