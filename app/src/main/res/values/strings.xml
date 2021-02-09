@@ -27,7 +27,7 @@
     <string name="address_label">Address</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="phone_label">Phone</string>
-    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="enter_your_phone_number">Enter your phone</string>
     <string name="email_label">Email</string>
     <string name="enter_your_email">Enter your email</string>
     <string name="password_label">Password</string>
@@ -39,5 +39,19 @@
     <string name="next_day_ground_delivery">Next day ground delivery</string>
     <string name="pickup">Pickup</string>
     <string name="image_of_shopping_cart">Image of shopping cart</string>
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="myItemsArray">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+    </string-array>
 
 </resources>

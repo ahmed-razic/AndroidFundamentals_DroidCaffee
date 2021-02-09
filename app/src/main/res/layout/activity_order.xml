@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:autofillHints=""
-        android:ems="10"
+        android:ems="9"
         android:hint="@string/enter_your_name"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/name_label"
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:ems="10"
+        android:ems="9"
         android:gravity="start|top"
         android:hint="@string/enter_your_address"
         android:inputType="textMultiLine"
@@ -74,19 +74,19 @@
         android:id="@+id/phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:autofillHints=""
+        android:ems="9"
         android:hint="@string/enter_your_phone_number"
         android:inputType="phone"
         app:layout_constraintBaseline_toBaselineOf="@+id/phone_label"
-        app:layout_constraintStart_toStartOf="@+id/address_text"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="@+id/address_text" />
 
     <EditText
         android:id="@+id/email_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:ems="10"
+        android:ems="9"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
         app:layout_constraintBaseline_toBaselineOf="@+id/email_label"
@@ -116,12 +116,12 @@
         android:id="@+id/password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:autofillHints=""
+        android:ems="9"
         android:hint="@string/enter_your_password"
         android:inputType="textPassword"
         app:layout_constraintBaseline_toBaselineOf="@+id/password_label"
-        app:layout_constraintStart_toStartOf="@+id/email_text"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="@+id/email_text" />
 
     <TextView
         android:id="@+id/note_label"
@@ -138,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:ems="10"
+        android:ems="9"
         android:gravity="start|top"
         android:hint="@string/enter_your_note"
         android:inputType="textAutoCorrect|textMultiLine|textCapSentences"
@@ -166,21 +166,31 @@
             android:id="@+id/sameday_radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/same_day_messenger_service"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/same_day_messenger_service" />
 
         <RadioButton
             android:id="@+id/nextday_radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/next_day_ground_delivery"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/next_day_ground_delivery" />
 
         <RadioButton
             android:id="@+id/pickup_radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/pickup"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/pickup" />
     </RadioGroup>
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="95dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/phone_number" />
 </androidx.constraintlayout.widget.ConstraintLayout>
