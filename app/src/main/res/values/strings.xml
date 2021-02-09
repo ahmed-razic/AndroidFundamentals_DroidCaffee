@@ -21,7 +21,10 @@
     <string name="donuts_description">Donuts are glazed and sprinkled with candy</string>
     <string name="ice_cream_description">Ice cream sandwiches have chocolate wafers and vanilla filling</string>
     <string name="froyo_description">FroYo is premium self-serve frozen yogurt</string>
-    <string name="name_label_text">Name</string>
+    <string name="name_label">Name</string>
     <string name="order_textView">Order</string>
+    <string name="enter_your_address">Enter your address</string>
+    <string name="address_label">Address</string>
+    <string name="enter_your_name">Enter your name</string>
 
 </resources>
