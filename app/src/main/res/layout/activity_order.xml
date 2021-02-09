@@ -10,9 +10,12 @@
         android:id="@+id/order_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_wide"
         android:layout_marginTop="@dimen/margin_wide"
         android:text="@string/order_textView"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,6 +26,8 @@
         android:layout_marginStart="@dimen/margin_wide"
         android:layout_marginTop="@dimen/margin_wide"
         android:text="@string/name_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_text" />
 
@@ -35,6 +40,7 @@
         android:ems="9"
         android:hint="@string/enter_your_name"
         android:inputType="textPersonName"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/name_label"
         app:layout_constraintStart_toEndOf="@+id/name_label" />
 
@@ -45,6 +51,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="@string/address_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_label" />
 
@@ -57,6 +65,7 @@
         android:gravity="start|top"
         android:hint="@string/enter_your_address"
         android:inputType="textMultiLine"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/address_label"
         app:layout_constraintStart_toStartOf="@+id/name_text" />
 
@@ -67,6 +76,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="64dp"
         android:text="@string/phone_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/address_label" />
 
@@ -78,6 +89,7 @@
         android:ems="9"
         android:hint="@string/enter_your_phone_number"
         android:inputType="phone"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/phone_label"
         app:layout_constraintStart_toStartOf="@+id/address_text" />
 
@@ -89,6 +101,7 @@
         android:ems="9"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/email_label"
         app:layout_constraintStart_toStartOf="@+id/phone_number" />
 
@@ -99,6 +112,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="@string/email_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_label" />
 
@@ -109,6 +124,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="@string/password_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_label" />
 
@@ -120,6 +137,7 @@
         android:ems="9"
         android:hint="@string/enter_your_password"
         android:inputType="textPassword"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/password_label"
         app:layout_constraintStart_toStartOf="@+id/email_text" />
 
@@ -130,6 +148,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="@string/note_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_label" />
 
@@ -142,6 +162,7 @@
         android:gravity="start|top"
         android:hint="@string/enter_your_note"
         android:inputType="textAutoCorrect|textMultiLine|textCapSentences"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/note_label"
         app:layout_constraintStart_toStartOf="@+id/password_text" />
 
@@ -150,15 +171,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="64dp"
         android:text="@string/choose_a_delivery_method"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/note_label" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/delivery_label"
         app:layout_constraintTop_toBottomOf="@+id/delivery_label">
 
@@ -166,31 +189,43 @@
             android:id="@+id/sameday_radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="middle"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/same_day_messenger_service" />
+            android:padding="4dp"
+            android:text="@string/same_day_messenger_service"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/nextday_radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="middle"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/next_day_ground_delivery" />
+            android:padding="4dp"
+            android:text="@string/next_day_ground_delivery"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/pickup_radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ellipsize="middle"
             android:onClick="onRadioButtonClicked"
-            android:text="@string/pickup" />
+            android:padding="4dp"
+            android:text="@string/pickup"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
     </RadioGroup>
 
     <Spinner
         android:id="@+id/label_spinner"
-        android:layout_width="95dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_label"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/phone_number" />
 </androidx.constraintlayout.widget.ConstraintLayout>

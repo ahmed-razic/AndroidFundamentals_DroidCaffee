@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidFundamentals_DroidCafee">
+
         <activity
             android:name=".OrderActivity"
             android:label="Order Activity" />
