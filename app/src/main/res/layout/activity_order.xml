@@ -7,7 +7,7 @@
     tools:context=".OrderActivity">
 
     <TextView
-        android:id="@+id/order_textView"
+        android:id="@+id/order_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_wide"
@@ -24,19 +24,19 @@
         android:layout_marginTop="@dimen/margin_wide"
         android:text="@string/name_label"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/order_textView" />
+        app:layout_constraintTop_toBottomOf="@+id/order_text" />
 
     <EditText
         android:id="@+id/name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="48dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_your_name"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/name_label"
-        app:layout_constraintStart_toEndOf="@+id/name_label"
-        android:autofillHints="" />
+        app:layout_constraintStart_toEndOf="@+id/name_label" />
 
     <TextView
         android:id="@+id/address_label"
@@ -52,12 +52,135 @@
         android:id="@+id/address_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/enter_your_address"
-        android:inputType="textEmailAddress"
+        android:inputType="textMultiLine"
         app:layout_constraintBaseline_toBaselineOf="@+id/address_label"
-        app:layout_constraintStart_toEndOf="@+id/address_label"
+        app:layout_constraintStart_toStartOf="@+id/name_text" />
+
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/phone_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_label" />
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_your_phone_number"
+        android:inputType="phone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/phone_label"
+        app:layout_constraintStart_toStartOf="@+id/address_text"
         android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/enter_your_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="@+id/email_label"
+        app:layout_constraintStart_toStartOf="@+id/phone_number" />
+
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/email_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_label" />
+
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/password_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_label" />
+
+    <EditText
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/enter_your_password"
+        android:inputType="textPassword"
+        app:layout_constraintBaseline_toBaselineOf="@+id/password_label"
+        app:layout_constraintStart_toStartOf="@+id/email_text"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/note_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/note_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_label" />
+
+    <EditText
+        android:id="@+id/note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/enter_your_note"
+        android:inputType="textAutoCorrect|textMultiLine|textCapSentences"
+        app:layout_constraintBaseline_toBaselineOf="@+id/note_label"
+        app:layout_constraintStart_toStartOf="@+id/password_text" />
+
+    <TextView
+        android:id="@+id/delivery_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/choose_a_delivery_method"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note_label" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/delivery_label"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_label">
+
+        <RadioButton
+            android:id="@+id/sameday_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/same_day_messenger_service"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/nextday_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next_day_ground_delivery"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/pickup_radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pickup"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

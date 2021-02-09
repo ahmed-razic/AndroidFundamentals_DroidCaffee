@@ -26,5 +26,17 @@
     <string name="enter_your_address">Enter your address</string>
     <string name="address_label">Address</string>
     <string name="enter_your_name">Enter your name</string>
+    <string name="phone_label">Phone</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="email_label">Email</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="password_label">Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="note_label">Note</string>
+    <string name="enter_your_note">Enter your note</string>
+    <string name="choose_a_delivery_method">Choose a delivery method:</string>
+    <string name="same_day_messenger_service">Same day messenger service</string>
+    <string name="next_day_ground_delivery">Next day ground delivery</string>
+    <string name="pickup">Pickup</string>
 
 </resources>
