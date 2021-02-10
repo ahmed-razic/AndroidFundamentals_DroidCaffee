@@ -17,6 +17,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "MESSAGE";
+    private String mOrderMessage = getString(R.string.action_order_message);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
             case R.id.action_order:
-                displayToast(getString(R.string.action_order_message));
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
+                startActivity(intent);
                 return true;
             case R.id.action_status:
                 displayToast(getString(R.string.action_status_message));
