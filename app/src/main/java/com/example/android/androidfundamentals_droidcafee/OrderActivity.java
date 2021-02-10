@@ -77,7 +77,6 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
-
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -98,7 +97,6 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
                 return true;
             default:
         }
-
         return super.onContextItemSelected(item);
     }
 }
