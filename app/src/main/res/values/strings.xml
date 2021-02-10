@@ -51,6 +51,11 @@
     <string name="action_contacts">Contacts</string>
 
 
+    <string name="context_edit">You selected Edit.</string>
+    <string name="context_share">You selected Share.</string>
+    <string name="context_delete">You selected Delete.</string>
+
+
     <string-array name="labels_array">
         <item>Home</item>
         <item>Work</item>

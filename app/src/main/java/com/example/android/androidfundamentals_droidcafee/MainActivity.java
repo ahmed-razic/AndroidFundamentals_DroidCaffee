@@ -6,19 +6,27 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
+import android.view.ContextMenu;
 import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import static com.example.android.androidfundamentals_droidcafee.R.id.donut_textView;
+import static com.example.android.androidfundamentals_droidcafee.R.id.froyo_textView;
+import static com.example.android.androidfundamentals_droidcafee.R.id.ice_cream_textView;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "MESSAGE";
-    private String mOrderMessage = getString(R.string.action_order_message);
+    private String mOrderMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -54,25 +63,21 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
 
-            case R.id.action_order:
-                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-                intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
-                startActivity(intent);
+            case R.id.context_edit:
+                displayToast(getString(R.string.context_edit));
                 return true;
-            case R.id.action_status:
-                displayToast(getString(R.string.action_status_message));
+            case R.id.context_share:
+                displayToast(getString(R.string.context_share));
                 return true;
-            case R.id.action_favorites:
-                displayToast(getString(R.string.action_favorites_message));
-                return true;
-            case R.id.action_contacts:
-                displayToast(getString(R.string.action_contact_message));
+            case R.id.context_delete:
+                displayToast(getString(R.string.context_delete));
                 return true;
             default:
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 
     public void showIceCreamOrder(View view) { displayToast(getString(R.string.ice_cream_order_message)); }
 

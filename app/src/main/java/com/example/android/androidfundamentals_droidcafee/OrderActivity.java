@@ -1,15 +1,22 @@
 package com.example.android.androidfundamentals_droidcafee;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import static com.example.android.androidfundamentals_droidcafee.R.id.delivery_label;
+import static com.example.android.androidfundamentals_droidcafee.R.id.donut_textView;
 
 public class OrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -26,6 +33,12 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
         if (spinner != null) {
             spinner.setOnItemSelectedListener(this);
             spinner.setAdapter(adapter);
+        }
+
+        if(findViewById(delivery_label) != null) {
+            registerForContextMenu(findViewById(delivery_label));
+        } else {
+            Log.d("Donut textView status: ", "view is null" );
         }
     }
 
@@ -62,5 +75,30 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+    }
+
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu_context, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.context_edit:
+                displayToast(getString(R.string.context_edit));
+                return true;
+            case R.id.context_share:
+                displayToast(getString(R.string.context_share));
+                return true;
+            case R.id.context_delete:
+                displayToast(getString(R.string.context_delete));
+                return true;
+            default:
+        }
+
+        return super.onContextItemSelected(item);
     }
 }

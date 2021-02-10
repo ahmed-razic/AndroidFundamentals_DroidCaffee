@@ -65,7 +65,7 @@
         android:onClick="showFroyoOrder"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/donut_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_wide"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="@+id/donut" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ice_cream_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_wide"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toTopOf="@+id/ice_cream" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/froyo_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_wide"
